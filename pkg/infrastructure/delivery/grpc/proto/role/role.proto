@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package role.v1;
+
+option go_package = "pkg/infrastructure/delivery/grpc/proto/role";
+
+import "google/api/annotations.proto";
+
+message Role {
+  uint32 id = 1;
+  string name = 2;
+  uint32 idcompany = 3;
+}
+
+message CreateRequest { Role role = 1; }
+
+message CreateResponse {}
+
+service RoleService {
+  rpc Create(CreateRequest) returns (CreateResponse) {
+    option (google.api.http) = {
+      post : "/v1/permission/role"
+      body : "*"
+    };
+  }
+}
