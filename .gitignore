@@ -1,0 +1,8 @@
+pkg/infrastructure/delivery/grpc/proto/**/*.go
+pkg/infrastructure/delivery/grpc/proto/**/*.json
+config.yml
+certs/*.cert
+certs/*.key
+certs/*.srl
+certs/*.pem
+certs/*.csr
